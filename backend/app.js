@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import postRoutes from "./post routes.js";
+import postRoutes from "./postRoutes.js";
 
 dotenv.config();
 
@@ -13,7 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 /* ROUTES */
-app.use("/", postRoutes);
+app.use("/api/posts", postRoutes);
+
 
 app.get("/", (req, res) => {
     res.send("Server is running!");
@@ -21,8 +22,8 @@ app.get("/", (req, res) => {
 
 /* MONGOOSE SETUP */
 mongoose
-    .connect(process.env.MONGO_URL, {
-        useNewUrlParser: true,
+    .connect(process.env.MONGO_URI, { 
+        useNewUrlParser: true, 
         useUnifiedTopology: true,
     })
     .then(() => {
@@ -30,6 +31,3 @@ mongoose
         app.listen(PORT, () => console.log(`Server successfully running on Port: ${PORT}`));
     })
     .catch((error) => console.log(`${error} did not connect`));
-
-
-
