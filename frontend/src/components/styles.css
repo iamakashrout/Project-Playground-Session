@@ -1,0 +1,170 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #1a1d23, #181824); /* Deep dark gradient */
+  color: #ffffff; /* White text */
+  min-height: 100vh;
+}
+
+/* PostForm container styling */
+.post-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #2f343a; /* Darker shade for form */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Input and textarea styling */
+.post-form input[type="text"],
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #343a40; /* Slightly lighter background */
+  color: #ffffff; /* White text */
+  font-size: 16px;
+}
+
+.post-form input::placeholder,
+.post-form textarea::placeholder {
+  color: #cccccc; /* Light placeholder text */
+}
+
+.post-form textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  height: 80px;
+}
+
+/* Submit button styling */
+.post-form button {
+  background-color: #8e32e9; /* Electric purple */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.post-form button:hover {
+  background-color: #6e28b5; /* Darker purple on hover */
+  box-shadow: 0px 0px 10px #8e32e9; /* Glowing hover effect */
+}
+/* General post-list styles */
+.post-list {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #1e1e2f;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual post items */
+.post-item {
+  background: linear-gradient(135deg, #292d3e, #1e1e2f);
+  border: 2px solid #8e32e9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.post-item:hover {
+  transform: scale(1.02);
+}
+
+/* Post title */
+.post-title {
+  color: #bb86fc;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* Author details */
+.post-author {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.edit-button,
+.delete-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #34d058, #218838);
+  color: white;
+  box-shadow: 0px 4px 8px rgba(52, 208, 88, 0.4);
+  margin-right: 15px
+}
+
+.edit-button:hover {
+  background: #2aaf4c;
+  box-shadow: 0px 0px 12px #34d058;
+  margin-right: 15px
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #ff4d4d, #c82333);
+  color: white;
+  box-shadow: 0px 4px 8px rgba(255, 77, 77, 0.4);
+}
+
+.delete-button:hover {
+  background: #d73842;
+  box-shadow: 0px 0px 12px #ff4d4d;
+}
+
+/* Input and textarea */
+.form-input,
+.form-textarea {
+  width: calc(100% - 20px); /* Ensure it fits inside the card */
+  margin-bottom: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #2a2d3e;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border: 2px solid #8e32e9;
+  box-shadow: 0px 0px 10px #8e32e9;
+  background: #30344e;
+}
