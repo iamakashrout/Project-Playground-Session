@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import postRoutes from "./postRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
+import connectDB from "./utils/dbConnect.js";
 
 dotenv.config();
 
@@ -20,14 +21,6 @@ app.get("/", (req, res) => {
     res.send("Server is running!");
 });
 
-/* MONGOOSE SETUP */
-mongoose
-    .connect(process.env.MONGO_URI, { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true,
-    })
-    .then(() => {
-        console.log("Database Connected Successfully!");
-        app.listen(PORT, () => console.log(`Server successfully running on Port: ${PORT}`));
-    })
-    .catch((error) => console.log(`${error} did not connect`));
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server running on Port: ${PORT}`));
+});
