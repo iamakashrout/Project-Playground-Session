@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./styles.css";
+import { BASE_URL } from "../helper";
 
 const PostForm = ({ onPostCreated }) => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const PostForm = ({ onPostCreated }) => {
     e.preventDefault();
     try {
       console.log("Submitting Data:", formData); 
-      const response = await axios.post("http://localhost:5000/api/posts/post", formData);
+      const response = await axios.post(`${BASE_URL}/api/posts/post`, formData);
       console.log("Created Post:", response.data);  
       
       setFormData({ firstName: "", lastName: "", Title: "", text: "" }); // Reset form

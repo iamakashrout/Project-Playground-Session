@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./styles.css"; // Using the same CSS for shared styles
+import { BASE_URL } from "../helper";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -12,7 +13,7 @@ const PostList = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/posts/get");
+      const response = await axios.get(`${BASE_URL}/api/posts/get`);
       console.log("Fetched Posts:", response.data);  
       setPosts(response.data);
     } catch (error) {
@@ -24,7 +25,7 @@ const PostList = () => {
   }, []);
   const deletePost = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}/delete`);
+      await axios.delete(`${BASE_URL}/api/posts/${id}/delete`);
       fetchPosts(); // Refresh after delete
     } catch (error) {
       console.error("Error deleting post:", error);
@@ -33,7 +34,7 @@ const PostList = () => {
   
   const saveEditPost = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/api/posts/${id}/edit`, editingPost);
+      await axios.patch(`${BASE_URL}/api/posts/${id}/edit`, editingPost);
       setEditingPost(null);
       fetchPosts(); // Refresh after edit
     } catch (error) {
