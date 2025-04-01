@@ -22,8 +22,8 @@ const PostForm = ({ onPostCreated }) => {
       const response = await axios.post(`${BASE_URL}/api/posts/post`, formData);
       console.log("Created Post:", response.data);  
       
-      setFormData({ firstName: "", lastName: "", Title: "", text: "" }); // Reset form
-      if (onPostCreated) onPostCreated(); // Refresh posts if function is passed
+      setFormData({ firstName: "", lastName: "", Title: "", text: "" }); 
+      if (onPostCreated) onPostCreated(); 
     } catch (error) {
       console.error("Error creating post:", error.response?.data || error.message);
     }
@@ -53,7 +53,7 @@ const PostForm = ({ onPostCreated }) => {
         className="form-input"
         type="text"
         name="Title"
-        value={formData.Title}  // ✅ FIXED
+        value={formData.Title}  
         onChange={handleChange}
         placeholder="Title"
         required

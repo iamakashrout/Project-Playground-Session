@@ -3,8 +3,8 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #1a1d23, #181824); /* Deep dark gradient */
-  color: #ffffff; /* White text */
+  background: linear-gradient(to bottom, #1a1d23, #181824); 
+  color: #ffffff; 
   min-height: 100vh;
 }
 
@@ -14,7 +14,7 @@ body {
   max-width: 500px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #2f343a; /* Darker shade for form */
+  background-color: #2f343a; 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -27,25 +27,25 @@ body {
   margin-bottom: 15px;
   border: none;
   border-radius: 5px;
-  background-color: #343a40; /* Slightly lighter background */
-  color: #ffffff; /* White text */
+  background-color: #343a40; 
+  color: #ffffff; 
   font-size: 16px;
 }
 
 .post-form input::placeholder,
 .post-form textarea::placeholder {
-  color: #cccccc; /* Light placeholder text */
+  color: #cccccc; 
 }
 
 .post-form textarea {
-  resize: vertical; /* Allow vertical resizing only */
+  resize: vertical; 
   height: 80px;
 }
 
 /* Submit button styling */
 .post-form button {
-  background-color: #8e32e9; /* Electric purple */
-  color: #ffffff; /* White text */
+  background-color: #8e32e9; 
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -56,8 +56,8 @@ body {
 }
 
 .post-form button:hover {
-  background-color: #6e28b5; /* Darker purple on hover */
-  box-shadow: 0px 0px 10px #8e32e9; /* Glowing hover effect */
+  background-color: #6e28b5; 
+  box-shadow: 0px 0px 10px #8e32e9; 
 }
 /* General post-list styles */
 .post-list {
@@ -144,7 +144,7 @@ body {
 /* Input and textarea */
 .form-input,
 .form-textarea {
-  width: calc(100% - 20px); /* Ensure it fits inside the card */
+  width: calc(100% - 20px);
   margin-bottom: 12px;
   padding: 10px;
   border: none;

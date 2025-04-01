@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./styles.css"; // Using the same CSS for shared styles
+import "./styles.css"; 
 import { BASE_URL } from "../helper";
 
 const PostList = () => {
@@ -26,7 +26,7 @@ const PostList = () => {
   const deletePost = async (id) => {
     try {
       await axios.delete(`${BASE_URL}/api/posts/${id}/delete`);
-      fetchPosts(); // Refresh after delete
+      fetchPosts(); 
     } catch (error) {
       console.error("Error deleting post:", error);
     }
@@ -36,7 +36,7 @@ const PostList = () => {
     try {
       await axios.patch(`${BASE_URL}/api/posts/${id}/edit`, editingPost);
       setEditingPost(null);
-      fetchPosts(); // Refresh after edit
+      fetchPosts(); 
     } catch (error) {
       console.error("Error updating post:", error);
     }
