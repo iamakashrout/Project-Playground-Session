@@ -14,15 +14,14 @@ const PostList = () => {
   const fetchPosts = async () => {
     try {
       const response = await axios.get(`${BASE_URL}/api/posts/get`);
-      console.log("Fetched Posts:", response.data);  
-      setPosts(response.data);
+      console.log("Fetched Posts:", response.data);
+      const sortedPosts = response.data.reverse();
+      setPosts(sortedPosts);
     } catch (error) {
       console.error("Error fetching posts:", error);
     }
   };
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+
   const deletePost = async (id) => {
     try {
       await axios.delete(`${BASE_URL}/api/posts/${id}/delete`);
@@ -41,7 +40,6 @@ const PostList = () => {
       console.error("Error updating post:", error);
     }
   };
-  
 
   return (
     <div className="post-list">
