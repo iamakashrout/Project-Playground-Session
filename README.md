@@ -11,7 +11,7 @@ A simple CRUD (Create, Read, Update, Delete) application that allows users to cr
 ## Tech Stack Used
 - **Frontend**: React.js
 - **Backend**: Node.js
-- **Database**: MongoDB 
+- **Database**: MongoDB
 
 ## Getting Started
 Follow these steps to run the project locally.
