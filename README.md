@@ -20,7 +20,7 @@ Follow these steps to run the project locally.
 Ensure you have the following installed:
 - Node.js
 - npm or yarn
-- MongoDB (if applicable)
+- MongoDB
 
 ### Installation & Setup
 #### 1. Clone the repository
